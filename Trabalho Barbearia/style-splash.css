@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: "DestructionManual"; 
+    src: url("fontes/Destruction Manual.otf") format("opentype"); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ap"; 
+    src: url("fontes/AppleGaramond.ttf") format("truetype"); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "romansd";
+    src: url("fontes/Roman\ SD.ttf") format("truetype");
+}
+@font-face {
+    font-family: "lastc";
+    src: url("fontes/LastChristmas.otf") format("opentype");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; 
+}
+
+/* Estilo da Splash Screen */
+.bd-splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da tela */
+    background: linear-gradient(#c6b398, #61533fb9);
+    background-color: #c6b398;
+    overflow: hidden; /* Garante que nenhum conteúdo "vaze" */
+}
+
+.div-splash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.div-splash img {
+    max-width: 80%; /* A imagem nunca ultrapassa a tela */
+    height: auto;
+    margin: 10px 0;
+    box-shadow: 8px 8px 20px 3px #c6b398;
+}
+
+.h2-splash {
+    font-family: 'romansd', 'sans-serif';
+    font-size: 5rem; 
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.h1-splash {
+    font-family: 'lastc';
+    padding: 10px 15px;
+    box-shadow: 0 10px 5px #ffffff58;
+    font-size: 300px; 
+    background-color: #61533fb9;
+    color: #c1b8ab;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .h1-splash {
+        font-size: 2rem; /* Reduz tamanho do título */
+    }
+
+    .h2-splash {
+        font-size: 1.2rem; 
+    }
+
+    .div-splash img {
+        max-width: 90%; /* Ajusta imagem para telas menores */
+    }
+}

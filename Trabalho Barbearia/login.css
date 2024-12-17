@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "ap";
+  src: url("fontes/AppleGaramond.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "romansd";
+  src: url("fontes/Roman\ SD.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "lastc";
+  src: url("fontes/LastChristmas.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bd-login {
+  background-color: #61533fb9;
+  align-items: center;
+}
+.main-login {
+  padding: 10px;
+}
+.card-login {
+  border-radius: 10px;
+  background-color: #61533fb9;
+}
+
+.h1-login {
+  margin: 10px;
+  padding: 20px;
+  color: #332e2e;
+  box-shadow: 8px 8px 10px 0 #5c4f4f;
+}
+.grp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 20px;
+}
+
+.erro {
+  color: #b80000;
+  display: none;
+}
+
+input {
+  outline: none;
+}
+
+input.invalido {
+  border: solid 2px #b80000;
+}
+
+.grp > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #e0cfb8b9;
+  font-size: 11pt;
+  box-shadow: 0px 10px 40px #4c4c4c;
+  outline: none;
+  box-sizing: border-box;
+}
+.grp > .label .Usuario{
+    margin: 10px;
+    padding: 10px;
+}
+.grp > label {
+  margin-bottom: 10px;
+  color: #100b0bb9;
+  font-weight: 1000;
+}
+
+.grp > input[type="submit"] {
+  margin: 30px;
+  color: #100b0bb9;
+  font-weight: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.grp > input[type="submit"]:hover {
+  background-color: #4d3c39b9;
+}

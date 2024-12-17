@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lolons Barber Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<header>
+    <!--Fiz o código inteiro baseado nas dimensões do Iphone XR  -->
+    <div class="cabecalho">
+        <img class="logo" src="imagens/logo.png">
+        <div class="sanduiche">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <!-- <div class="menu"></div>-->
+
+            <nav class="nav-list">
+
+                <ul>
+                    <li><a href="#introducao">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#trabalhos-realizados">Serviços</a></li>
+                    <li><a href="#agendamentos">Agendamentos</a></li>
+                    <li><a href="#historico">Histórico de atendimentos</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script src="mobile-navbar.js"></script>
+<!--Login-->
+<div id="modalLogin" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</div>
+
+<body>
+    <div id="mensagem-saudacao" style="display:none;">
+        <h1 id="bemVindo"></h1>
+    <p>Estamos felizes em ter você aqui!</p>
+
+    <!-- Script para buscar o nome do usuário -->
+    <script>
+        // Recupera o nome salvo no localStorage
+        const nomeUsuario = localStorage.getItem('nomeUsuario');
+        console.log(nomeUsuario);
+        // Insere o nome no elemento com ID 'bemVindo'
+        if (nomeUsuario) {
+            document.getElementById('bemVindo').textContent = `Olá, ${nomeUsuario}!`;
+        } else {
+            document.getElementById('bemVindo').textContent = "Olá, visitante!";
+        }
+    </script>
+    </div>
+    <section id="introducao">
+        <img class="barbearia" src="imagens/barbearia.jpg" alt="barbearia">
+        
+        <p>Seja bem-vindo ao <p2>Lolons Barber Shop</p2>
+        </p>
+        <p>Aqui é cabelo, barba e bigode. Junte-se a nós e dê aquele <p1>tapa</p1> no visual</p>
+
+        <div class="box-imagem">
+            <img class="img-cortando-cabelo" src="imagens/cortandocabelo.jpg"
+                alt="Imagem de um homem cortando o cabelo">
+        </div>
+    </section>
+    <section id="sobre-nos">
+
+        <img class="img-tesoura" src="imagens/tesoura.jpg" alt="Imagem de um homem segurando tesouras e pentes">
+        <div class="risco">
+            <div class="texto-sobrenos">
+                <h1 id="titulo-sobrenos">Sobre nós</h1>
+                <p id="p-sobrenos">
+
+                    Na era moderna, cuidar da aparência é essencial, e a Lolons Barber Shop é o lugar ideal para isso!
+                    Oferecemos um atendimento de qualidade para garantir que você saia mais confiante e com um visual
+                    impecável.
+                </p>
+                <p id="p1-sobrenos">
+                    Melhor Lugar
+                </p>
+            </div>
+        </div>
+        <br />
+        <div class="img-barbeiros">
+
+            <p id="texto-risco">Você encontra aqui os melhores barbeiros da cidade!</p>
+
+            <div class="img-barbeira">
+                <img class="barbeira" src="imagens/Barbeira.jpg">
+                <div>
+                    <h3 class="titulo-barbeira">Haquel</h3>
+                    <div class="div-do-texto-barbeira">
+                        <p id="texto-barbeira">
+                            Sua especialidade é cortar cabelos e renovar seu visual.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-bigodudo">
+                <img class="bigodudo" src="imagens/barbeiroBigodudo.jpg">
+                <div>
+                    <h3 class="titulo-barbeira">Diego</h3>
+                    <div class="div-do-texto-barbeira">
+                        <p id="texto-barbeira">
+                            Conhecido como "Seu Bigode". Já devem imaginar o porquê.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-barbeirocriancas">
+                <img class="criancas" src="imagens/BarbeiroCriancas.jpg">
+                <div>
+                    <h3 class="titulo-barbeira">Roberto</h3>
+                    <div class="div-do-texto-barbeira">
+                        <p id="texto-barbeira">
+                            Escpecializado em cortar o cabelo de crianças.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="img-barba">
+                <img class="barba" src="imagens/Barba.jpg">
+                <div>
+                    <h3 class="titulo-barba">Junão</h3>
+                    <div class="div-do-texto-barba">
+                        <p id="texto-barba">
+                            Cuida da sua barba como ninguém.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="trabalhos-realizados">
+
+        <div class="Estamos-Abertos">
+            <img src="imagens/EstamosAbertos.png">
+
+            <br\>
+        </div>
+        <div class="div-trabalhos-realizados">
+            <h3 id="h3-ta">
+                --Trabalhos Realizados--
+            </h3>
+            <p id="p-ta">
+                Aqui estão alguns dos nossos trabalhos mais recentes.
+            </p>
+            <div class="div-img-ta">
+
+                <img class="img1" src="imagens/cabelo-cortado.jpg">
+
+                <img class="img2" src="imagens/cortandocabelo.jpg">
+
+                <img class="img3" src="imagens/cabelo-cortado2.jpg">
+
+                <img class="img4" src="imagens/criacanovo.png">
+
+                <img class="img5" src="imagens/cabelo-pitnado.jpg">
+
+                <img class="img6" src="imagens/mulhernovo.png">
+            </div>
+        </div>
+    </section>
+    <section class="Servicos-disponiveis">
+        <div class="div-servicos-disponiveis">
+            <p class="linha-servicos">------------------------------------------------------------------------</p>
+            <h3 id="h3-servicos">
+                --Serviços Disponíveis--
+
+            </h3>
+
+            <!-- Seção Cabelos -->
+            <p id="p-servicos">
+                <strong>Cabelos:</strong><br>
+                - Corte de Cabelo Tradicional - <span id="p-servicos-preco">R$ 35,00</span><br>
+                - Corte de Cabelo Degradê (Fade) - <span id="p-servicos-preco">R$ 40,00</span><br>
+                - Corte Militar/Polido - <span id="p-servicos-preco">R$ 35,00</span><br>
+                - Tingimento de Cabelos - <span id="p-servicos-preco">R$ 70,00</span><br>
+                - Luzes ou Mechas Masculinas - <span id="p-servicos-preco">R$ 120,00</span><br>
+                - Tratamento Anti-Queda Capilar - <span id="p-servicos-preco">R$ 70,00</span>
+            </p>
+            <p class="linha-servicos">--------------------------------------------------------------</p>
+
+            <!-- Seção Barba + Bigode -->
+            <p id="p-servicos">
+                <strong>Barba + Bigode:</strong><br>
+                - Barba Completa + Navalha - <span id="p-servicos-preco">R$ 25,00</span><br>
+                - Barboterapia Premium - <span id="p-servicos-preco">R$ 50,00</span><br>
+                - Pigmentação de Barba ou Cabelo - <span id="p-servicos-preco">R$ 50,00</span><br>
+                - Barba + Limpeza de Pele (Combo) - <span id="p-servicos-preco">R$ 80,00</span>
+            </p>
+
+            <p class="linha-servicos">--------------------------------------------------------------</p>
+            <!-- Seção Cortes Infantis -->
+            <p id="p-servicos">
+                <strong>Cortes Infantis:</strong><br>
+                - Corte Infantil - <span id="p-servicos-preco">R$ 30,00</span>
+            </p>
+
+            <p class="linha-servicos">--------------------------------------------------------------</p>
+
+            <!-- Seção Sobrancelhas e Relaxamento -->
+            <p id="p-servicos">
+                <strong>Sobrancelhas e Relaxamento:</strong><br>
+                - Massagem Relaxante Facial com Toalha Quente - <span id="p-servicos-preco">R$ 35,00</span><br>
+                - Limpeza de Pele Express (Rápida) - <span id="p-servicos-preco">R$ 60,00</span>
+            </p>
+            <p class="linha-servicos">------------------------------------------------------------------------</p>
+        </div>
+    </section>
+    <section id="Agendamentos">
+        <div class="texto-agendamento">
+            <h3 id="h3-agendamento">Agende seu horário!</h3>
+        </div>
+
+        <div id="form-agendamento">
+            <form id="formulario-agendamento">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="contato">Contato:</label>
+                <input type="text" id="contato" required>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+
+                <label for="tipo">Tipo de Agendamento:</label>
+                <select id="tipo" required>
+                    <option value="">Selecione</option>
+                    <option value="Cabelo">Cabelo</option>
+                    <option value="Sobrancelha">Sobrancelha</option>
+                    <option value="Barba">Barba</option>
+                    <option value="Bigode">Bigode</option>
+                </select>
+
+                <div id="subtipo-container" style="display: none;">
+                    <label for="subtipo">Serviço de Cabelo:</label>
+                    <select id="subtipo">
+                        <option value="Cortar">Cortar</option>
+                        <option value="Pintar">Pintar</option>
+                    </select>
+                </div>
+
+                <button type="submit">Agendar</button>
+            </form>
+            <div class="lista-agendamentos">
+                <h3>Agendamentos Feitos:</h3>
+                <ul id="agendamentos"></ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="historico">
+        <h1 class="h1-htr">Histórico de Agendamentos:</h1>
+        <div class="div-dos-htr">
+            <div class="htr">
+                <h3 class="h3-htr">
+                    Corte de cabelo:
+                </h3>
+                <p class="p-htr">Nome: Helo | Contato: (45) 988206666 | 2024/12/06 | 13:00 </p>
+            </div>
+            <div class="htr">
+                <h3 class="h3-htr">
+                    Corte de Cabelo Tradicional:
+                </h3>
+                <p class="p-htr">Nome: Helo | Contato: (45) 988206666 | 2024/10/14 | 10:00 </p>
+            </div>
+            <div class="htr">
+                <h3 class="h3-htr">
+                    Massagem Relaxante Facial com Toalha Quente
+                </h3>
+                <p class="p-htr">Nome: Helo | Contato: (45) 988206666 | 2024/08/30 | 08:00 </p>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <script>
+        
+            
+        
+        // Função para abrir o modal
+        function abrirModal() {
+            document.getElementById("modalLogin").style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            document.getElementById("modalLogin").style.display = "none";
+        }
+
+        // Fechar o modal ao clicar fora dele
+        window.onclick = function (event) {
+            const modal = document.getElementById("modalLogin");
+            if (event.target === modal) {
+                fecharModal();
+            }
+        }
+
+        // Lógica do formulário de login
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+
+            // Simples validação de usuário e senha
+            if (usuario && senha) {
+                // Armazenando o nome do usuário no localStorage
+                localStorage.setItem("usuario", usuario);
+
+                // Exibindo a saudação personalizada
+                saudacaoUsuario(usuario);
+
+                // Fechando o modal após login bem-sucedido
+                fecharModal();
+            } else {
+                alert("Por favor, preencha os campos corretamente.");
+            }
+        });
+
+        // Função para exibir a saudação personalizada
+        function saudacaoUsuario(usuario) {
+            const saudacao = document.getElementById("saudacao");
+            const mensagemSaudacao = document.getElementById("mensagem-saudacao");
+
+            // Exibe a mensagem "Oi, Fulano!"
+            saudacao.textContent = `Oi, ${usuario}!`;
+            mensagemSaudacao.style.display = "block";
+        }
+
+        // Função para verificar se o usuário está logado e exibir a saudação ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+            const usuario = localStorage.getItem("usuario");
+
+            if (usuario) {
+                // Se o usuário já tiver feito login, exibe a saudação
+                saudacaoUsuario(usuario);
+            } else {
+                // Caso contrário, o botão de login estará disponível
+                document.getElementById("mensagem-saudacao").style.display = "none";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

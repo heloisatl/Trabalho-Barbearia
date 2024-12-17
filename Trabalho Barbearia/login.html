@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+
+<body class="bd-login">
+    <div class="main-login">
+        <div class="div-login">
+            <div class="card-login">
+                <h1 class="h1-login">LOGIN</h1>
+
+                <!-- Grupo para Usuário -->
+                <div class="grp">
+                    <label for="Usuario">Usuário</label>
+                    <input id="nomeUsuario" type="text" placeholder="Informe seu nome">
+                    <span class="erro">O nome deve ter pelo menos 4 caracteres</span>
+                </div>
+
+                <!-- Grupo para Email -->
+                <div class="grp">
+                    <label for="Email">E-mail</label>
+                    <input id="email" type="text" placeholder="Informe o seu e-mail">
+                    <span class="erro">Valide o e-mail!</span>
+                </div>
+
+                <!-- Grupo para Senha -->
+                <div class="grp">
+                    <label for="Senha">Senha</label>
+                    <input id="senha" type="password" placeholder="Informe a sua senha">
+                    <span class="erro">A senha precisa ter no mínimo 8 caracteres</span>
+                </div>
+
+                <!-- Botão de Cadastro -->
+                <form onsubmit="return validarELogin()">
+                    <div class="grp">
+                        <input type="submit" value="Entrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // Função para validar e salvar o nome do usuário
+        function validarELogin() {
+            const nome = document.getElementById('nomeUsuario').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Validação para o nome
+            if (nome.length < 4) {
+                alert("O nome deve ter pelo menos 4 caracteres.");
+                return false; // Impede o envio do formulário
+            }
+
+            // Validação para o e-mail
+            if (!email.includes('@')) {
+                alert("Informe um e-mail válido.");
+                return false;
+            }
+
+            // Validação para a senha
+            if (senha.length < 8) {
+                alert("A senha precisa ter pelo menos 8 caracteres.");
+                return false;
+            }
+
+            // Salvar o nome no Local Storage
+            localStorage.setItem('nomeUsuario', nome);
+
+            // Redireciona para outra página
+            window.location.href = "index.html";
+            return false; // Impede o recarregamento padrão do formulário
+        }
+    </script>
+</body>
+
+</html>
